@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Orbit Desktopのプライバシーポリシー。Google・Thunderbird連携でアクセスするデータ、利用目的、ローカル保存、共有、アクセス取り消しと削除について。">
+  <meta name="theme-color" content="#205c49">
+  <title>プライバシーポリシー / Privacy Policy — Orbit Desktop</title>
+  <link rel="canonical" href="https://shogo389.github.io/orbit-desktop/privacy.html">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<header><div class="wrap header-inner"><a class="brand" href="./"><img src="icon.svg" alt="" width="34" height="34">Orbit Desktop</a><nav aria-label="メインナビゲーション"><a href="./">ホーム</a><a href="#english" lang="en">English</a></nav></div></header>
+<main id="main" class="wrap document">
+  <p class="eyebrow">Orbit Desktop / Privacy</p>
+  <h1>プライバシーポリシー</h1>
+  <p class="note">施行日・最終更新：2026年11月12日 · 対象：Orbit DesktopおよびOrbit Mail Review</p>
+  <div class="callout"><p>Orbit Desktopは、Shogo389が開発・運用する個人用Windowsアプリです。接続したサービスの情報をデスクトップに表示し、メールの確認や予定・タスクの管理を支援します。本ポリシーはアプリ、Thunderbird連携アドオン、およびこの説明サイトを対象とします。</p></div>
+  <section aria-labelledby="access"><h2 id="access">1. アクセスする情報と利用目的</h2>
+    <p>利用者が接続・許可した機能に必要な情報にアクセスします。すべての連携を有効にする必要はありません。</p>
+    <div class="table-scroll"><table><caption class="note">連携ごとのデータと用途</caption><thead><tr><th scope="col">機能</th><th scope="col">アクセスする情報・用途</th></tr></thead><tbody>
+      <tr><td>Gmail</td><td>メールアドレス、利用可能な送信元エイリアス、メールの識別子・ヘッダー・件名・冒頭テキスト・日時・ラベル、受信・送信履歴を読み取り、一覧表示、返信候補の判定、返信記録の確認に使用します。権限は <code>gmail.readonly</code> です。メールの送信・削除・既読変更は行いません。</td></tr>
+      <tr><td>Google Calendar<br>（任意）</td><td>接続先のメールアドレス、カレンダー一覧とアクセス権、選択したカレンダーの予定のタイトル・説明・日時・場所・参加状態などを表示します。通常は <code>calendar.events.readonly</code>、<code>calendar.calendarlist.readonly</code>、<code>userinfo.email</code> を使用します。編集を有効にした場合のみ <code>calendar.events</code> を許可し、利用者が保存した予定を追加・更新します。</td></tr>
+      <tr><td>Google Tasks<br>（任意）</td><td>接続先のメールアドレス、タスクリスト一覧、選択したリストのタスク名・メモ・期限・状態などを表示します。通常は <code>tasks.readonly</code> と <code>userinfo.email</code> を使用します。編集を有効にした場合のみ <code>tasks</code> を許可し、利用者が保存したタスクを追加・更新します。</td></tr>
+      <tr><td>Thunderbird<br>（任意）</td><td>Orbit Mail Reviewがメールアカウント・フォルダー情報、差出人、件名、日時、メール識別子、参照ヘッダー、取得可能な本文を読み取り、同じPCのOrbitへ渡します。本文の取得量には上限があります。添付ファイルを分類目的で収集・保存しません。認証はThunderbirdが管理し、OrbitはThunderbirdのパスワードや認証トークンをコピーしません。</td></tr>
+      <tr><td>その他の任意機能</td><td>Teamsを接続すると、アカウントとチャットの情報を返信候補の表示に使用します。Windows通知の取り込みを許可すると、対象アプリ名・通知のタイトル・本文・日時を取得します。表示設定、対応済み・保留の記録、分類に対する利用者の修正もPC内に保存します。</td></tr>
+    </tbody></table></div>
+    <p class="note">Googleスコープの <code>https://www.googleapis.com/auth/</code> 接頭辞は表中で省略しています。メール分類はPC内のルールと利用者の修正に基づく補助的な処理であり、全履歴の網羅や返信の必要性の正確な判定を保証しません。</p>
+  </section>
+  <section><h2>2. 認証・保存・保護</h2>
+    <p>Googleとの接続にはOAuthを使用し、Googleの認証画面で利用者が許可します。OrbitはGoogleアカウントのパスワードを取得しません。Google APIとの通信にはHTTPSを使用します。</p>
+    <p>接続用の認証トークン、取得したメール・予定・タスクなどのキャッシュ、および返信対応の記録は、PC内の <code>%LOCALAPPDATA%\OrbitDesktop</code> に保存します。これらの認証情報・キャッシュ・返信記録にはWindowsのDPAPIによるユーザー単位の暗号化を使用します。一般的な画面設定など、すべての設定ファイルを暗号化するものではありません。Thunderbird連携の保存先はその配下の <code>Thunderbird</code> です。</p>
+    <p>未処理メールの確認を継続できるよう、前回の取得結果や分類結果を保持する場合があります。すべてのローカルデータに一律の自動削除期限は設けていません。接続解除・アクセス取り消し・アンインストールだけで、すべてのローカルファイルや利用者のバックアップが削除されるとは限りません。</p>
+  </section>
+  <section><h2>3. 送信・共有と利用の制限</h2>
+    <p>Orbitは、利用者のPCから有効にした連携先（Google、Microsoftなど）へ、認証・データ取得・明示的に保存した編集内容の反映に必要な通信を行います。Thunderbird連携は同じPC内のアドオンとネイティブホストの間でデータを渡します。元のメールや予定を開く操作では、該当サービスまたはThunderbirdを開きます。</p>
+    <p>開発者が運用するサーバーへメール・予定・タスクを収集する仕組みはありません。これらのデータを販売、広告利用、第三者への提供、外部AIサービスへの送信、汎用AI・機械学習モデルの学習に使用しません。開発者が利用者のデータへ遠隔アクセスする仕組みもありません。端末のバックアップ・同期を利用者が別途設定した場合、そのコピーは当該設定とサービスの管理対象になります。</p>
+    <p>Orbit DesktopによるGoogle APIから取得した情報の利用、および他のアプリへの転送は、Limited Useの要件を含む<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>に従います。</p>
+  </section>
+  <section><h2>4. アクセスの取り消しとデータの削除</h2>
+    <ol>
+      <li><strong>Googleへのアクセスを止める：</strong><a href="https://myaccount.google.com/connections">Googleアカウントの「サードパーティ製のアプリとサービス」</a>でOrbitが使用するOAuthアプリへのアクセスを取り消せます。OrbitのGmail接続画面でも「このPCの接続を解除」を選べます。Thunderbird自体の接続許可は別に管理されます。</li>
+      <li><strong>Thunderbird連携を止める：</strong>ThunderbirdでOrbit Mail Reviewアドオンを無効化または削除します。これにより新たな収集が停止します。保存済みデータは別途削除が必要です。</li>
+      <li><strong>PC内のOrbitデータを削除する：</strong>連携アドオンを停止し、Orbitを終了した状態で <code>%LOCALAPPDATA%\OrbitDesktop</code> の保存データを削除できます。フォルダー全体を削除すると、接続情報、キャッシュ、返信記録、ウィジェット設定、配置済みの連携用ファイルなども失われます。バックアップ内のコピーは別途削除してください。Thunderbirdの元メールやGoogle上のメール・予定・タスクは、この操作では削除されません。</li>
+    </ol>
+    <p>保存範囲や削除手順についての問い合わせは下記の窓口で受け付けます。開発者は利用者のPC内のデータを遠隔で削除できません。</p>
+  </section>
+  <section><h2>5. このウェブサイト</h2>
+    <p>このサイトはGitHub Pages上の静的な説明サイトです。独自のアクセス解析、広告、追跡用Cookie、ログインフォームを設置していません。このサイトからメールやGoogleの認証トークンを収集することはありません。配信基盤のGitHubは、サイトへのアクセスに伴うIPアドレスなどの技術情報を、<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシーステートメント</a>に従って取り扱います。</p>
+  </section>
+  <section><h2>6. 運用者・お問い合わせ・変更</h2>
+    <p>開発・運用者：Shogo389。お問い合わせは<a href="https://github.com/Shogo389/shogo389.github.io/issues">このサイトのGitHub Issues</a>へお願いします。公開の窓口なので、メール本文、アドレス、認証トークンなどの個人情報・秘密情報を投稿しないでください。</p>
+    <p>機能やデータの扱いを変更する場合は、このページと更新日を更新します。許可済みの目的や範囲を超える新しいデータ利用は事前に説明し、必要な同意を得てから行います。</p>
+  </section>
+  <div id="english" class="lang-divider" lang="en">
+    <p class="eyebrow">English</p><h2>Privacy Policy</h2><p class="note">Effective and last updated: November 12, 2026</p>
+    <p>This policy covers Orbit Desktop, its optional Orbit Mail Review Thunderbird add-on, and this website. Orbit Desktop is a personal Windows application developed and operated by Shogo389, currently for the developer’s own use.</p>
+    <section><h2>1. Information accessed and purposes</h2>
+      <p>Only enabled and authorized integrations are used:</p>
+      <ul>
+        <li><strong>Gmail:</strong> account address, available sender aliases, message identifiers, headers, subjects, snippets, dates, labels, and received/sent history, for mail lists, reply reminders and detecting reply records. The scope is <code>gmail.readonly</code>. Orbit does not send, delete or mark mail as read.</li>
+        <li><strong>Google Calendar (optional):</strong> account email, calendar lists and access roles, and selected events including titles, descriptions, times, locations and participation status. Read access uses <code>calendar.events.readonly</code>, <code>calendar.calendarlist.readonly</code> and <code>userinfo.email</code>. Editing is separately enabled with <code>calendar.events</code>; creation or updates require the user’s save action.</li>
+        <li><strong>Google Tasks (optional):</strong> account email, task lists, and selected tasks including titles, notes, due dates and status. Read access uses <code>tasks.readonly</code> and <code>userinfo.email</code>. Editing is separately enabled with <code>tasks</code> and requires the user’s save action. Google scope names here omit the <code>https://www.googleapis.com/auth/</code> prefix.</li>
+        <li><strong>Thunderbird (optional):</strong> account/folder information, sender, subject, time, message identifiers, reference headers and available message text, subject to collection limits. Attachments are not collected or stored for classification. Authentication stays in Thunderbird; Orbit does not copy its passwords or tokens.</li>
+        <li><strong>Other optional features:</strong> connected Teams account/chat information, and selected Windows notification app names, titles, text and timestamps, for review reminders. Display settings, handled/snoozed records and classification corrections are stored locally.</li>
+      </ul><p>Mail classification uses local rules and user corrections. It is an aid, not a guarantee of complete collection or an accurate determination that a reply is required.</p>
+    </section>
+    <section><h2>2. Authentication, storage and retention</h2>
+      <p>Google authorization uses OAuth and Google’s consent screen. Orbit does not receive Google passwords. Google API connections use HTTPS. Authentication tokens, mail/calendar/task caches and reply records are stored under <code>%LOCALAPPDATA%\OrbitDesktop</code>, using Windows DPAPI encryption tied to the Windows user. Thunderbird bridge data is stored in its <code>Thunderbird</code> subfolder. General settings are not all encrypted.</p>
+      <p>Previous results and unresolved items may be retained to support ongoing review. There is no single automatic deletion period covering all local data. Disconnecting, revoking access or uninstalling does not necessarily remove all saved files or user-created backups.</p>
+    </section>
+    <section><h2>3. Transfers, sharing and Limited Use</h2>
+      <p>The PC communicates with enabled providers, such as Google and Microsoft, for authentication, retrieval and edits explicitly saved by the user. The Thunderbird add-on passes data to the native host on the same PC. Opening an original item opens the corresponding service or Thunderbird.</p>
+      <p>No developer-operated server collects mail, calendar or task data, and the developer has no remote-access mechanism for users’ data. This data is not sold, used for advertising, provided to third parties, sent to external AI services or used to train general-purpose AI or machine-learning models. Copies made by user-configured backup or sync tools are governed by those tools and settings.</p>
+      <p>Orbit Desktop’s use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    </section>
+    <section><h2>4. Revocation and deletion</h2>
+      <p>Revoke the relevant OAuth app’s access in <a href="https://myaccount.google.com/connections">Google Account connections</a>. Orbit also offers a local Gmail disconnect action. Thunderbird’s own authorization is separate. Disable or remove Orbit Mail Review in Thunderbird to stop its collection; saved data remains until deleted.</p>
+      <p>To remove Orbit’s local data, stop the add-on and quit Orbit, then delete saved data in <code>%LOCALAPPDATA%\OrbitDesktop</code>. Deleting the entire folder removes connection credentials, caches, reply records, widget settings and installed bridge files. Remove backup copies separately. This does not delete original Thunderbird mail or Google mail, events or tasks. Contact the developer for guidance; the developer cannot remotely erase files on your PC.</p>
+    </section>
+    <section><h2>5. Website, contact and changes</h2>
+      <p>This static GitHub Pages site has no custom analytics, advertising, tracking cookies or sign-in forms. It does not collect mail or Google tokens. GitHub may process technical access data, including IP addresses, under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Privacy Statement</a>.</p>
+      <p>Developer and operator: Shogo389. Contact: <a href="https://github.com/Shogo389/shogo389.github.io/issues">GitHub Issues</a>, a public channel. Do not post personal data, message contents or credentials. Changes to data practices will be reflected here with an updated date; new uses beyond previously disclosed purposes will be explained and require consent where applicable.</p>
+    </section>
+  </div>
+</main>
+<footer><div class="wrap footer-inner"><p>© 2026 Shogo389 · Orbit Desktop</p><p><a href="./">ホーム / Home</a> · <a href="#main">ページ上部へ / Back to top</a></p></div></footer>
+</body>
+</html>

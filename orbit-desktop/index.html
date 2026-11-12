@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Orbit Desktopは、メールの返信確認、予定、タスクをWindowsデスクトップにまとめる個人用アプリです。機能とGoogle連携時のデータの扱いをご案内します。">
+  <meta name="theme-color" content="#205c49">
+  <title>Orbit Desktop — メール・予定・タスクを、デスクトップに。</title>
+  <link rel="canonical" href="https://shogo389.github.io/orbit-desktop/">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<header><div class="wrap header-inner">
+  <a class="brand" href="./"><img src="icon.svg" alt="" width="34" height="34">Orbit Desktop</a>
+  <nav aria-label="メインナビゲーション"><a href="#features">機能</a><a href="privacy.html">プライバシー</a><a href="#english" lang="en">English</a></nav>
+</div></header>
+<main id="main">
+  <div class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow" lang="en">A personal workspace for Windows</p>
+        <h1 id="hero-title">メール・予定・タスクを、<br>デスクトップに。</h1>
+        <p class="lead">Orbit Desktopは、日々の確認事項を小さなウィジェットにまとめる個人用Windowsアプリです。返信が必要なメールや次の予定を、作業のそばに表示します。</p>
+        <a class="button" href="privacy.html">データの扱いを確認する <span aria-hidden="true">↗</span></a>
+        <p class="note">開発・運用：Shogo389 · 現在は開発者本人の個人利用向け</p>
+      </div>
+      <div class="preview" role="img" aria-label="架空の表示例：返信の確認ウィジェットに要返信のメールと要確認・判断保留の分類を表示">
+        <div class="caption">ORBIT DESKTOP / 表示イメージ・架空の内容</div>
+        <div class="widget">
+          <div class="widget-head"><b>返信の確認</b><span><span class="dot"></span>朝のチェック</span></div>
+          <div class="review"><strong>要返信</strong><p>来週の打ち合わせについて</p><small>日程候補の確認をお願いします。（例）</small></div>
+          <div class="row"><span>要確認・対応</span><span class="badge">予定や依頼を確認</span></div>
+          <div class="row"><span>判断保留</span><span class="badge">内容を開いて確認</span></div>
+          <div class="row"><span>参考</span><span class="badge">お知らせなど</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="features" aria-labelledby="features-title">
+      <p class="eyebrow">日々の確認を、ひとつの場所に</p>
+      <h2 id="features-title">必要な連携を選んで使えます。</h2>
+      <div class="features">
+        <div><p class="number">01 / MAIL</p><h3>メールと返信の確認</h3><p>Gmailの読み取り専用連携、またはThunderbirdの「Orbit Mail Review」アドオンでメールを取得。PC内のルールで返信候補などを分類し、元のメールを開いて確認できます。</p></div>
+        <div><p class="number">02 / CALENDAR</p><h3>予定を見渡す</h3><p>選択したGoogle Calendarの予定を表示します。追加・編集を利用するときだけ、別途編集権限を許可し、利用者の保存操作で反映します。</p></div>
+        <div><p class="number">03 / TASKS</p><h3>タスクを手元に</h3><p>選択したGoogle Tasksリストのタスクと期限を表示します。追加・編集機能も、利用者が編集を有効にした場合に利用できます。</p></div>
+      </div>
+    </section>
+    <section class="section split" aria-labelledby="data-title">
+      <div><p class="eyebrow">データと操作</p><h2 id="data-title">自分のPCで確認。<br>必要な権限だけを許可。</h2></div>
+      <div><ul class="plain-list">
+        <li>Googleへの接続はGoogleの認証画面で許可します。OrbitがGoogleのパスワードを受け取ることはありません。</li>
+        <li>メールの自動送信・削除・既読変更は行いません。</li>
+        <li>認証トークンと取得データのキャッシュは、Windowsユーザーに紐づく暗号化を使用してPC内に保存します。</li>
+        <li>メール分類はローカル処理です。メール・予定・タスクを外部AIへ送ったり、AIモデルの学習に使用したりしません。</li>
+      </ul><p class="note" style="margin-top:18px">分類は確認の手助けです。返信義務の確定や、すべてのメールの取得を保証するものではありません。詳しい取得範囲・保存・削除方法は<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p></div>
+    </section>
+    <section class="section split" aria-labelledby="about-title">
+      <div><p class="eyebrow">このアプリについて</p><h2 id="about-title">個人用のデスクトップツール</h2></div>
+      <div><p>Orbit DesktopはShogo389が開発・運用しています。このサイトはアプリの説明とプライバシー情報を公開するためのもので、オンラインのメール閲覧サービスではありません。現在、このサイトで一般向けの配布や利用登録は行っていません。</p><p>お問い合わせ：<a href="https://github.com/Shogo389/shogo389.github.io/issues">GitHub Issues</a>（公開）。メール本文、認証情報、その他の個人情報は投稿しないでください。</p><p class="note">Google、Microsoft、Mozillaによる公式製品ではありません。</p></div>
+    </section>
+  </div>
+  <section class="english" id="english" lang="en" aria-labelledby="english-title"><div class="wrap">
+    <p class="eyebrow">English overview</p><h2 id="english-title">Your mail, calendar and tasks, close at hand.</h2>
+    <p>Orbit Desktop is a personal Windows desktop application developed and operated by Shogo389. It displays mail review reminders, selected Google Calendar events and Google Tasks in desktop widgets. It is currently intended for the developer’s own use; this website does not offer public sign-up or downloads.</p>
+    <p>Gmail access is read-only. The optional Orbit Mail Review add-on reads mail from Thunderbird accounts and passes it to Orbit on the same PC. Classification runs locally, without sending content to an external AI service. Calendar and Tasks editing requires separate permission and an explicit save action. Mail is never automatically sent, deleted or marked as read by Orbit.</p>
+    <p>Read our <a href="privacy.html#english">Privacy Policy in English</a> for access, use, storage, sharing and deletion details. Contact: <a href="https://github.com/Shogo389/shogo389.github.io/issues">GitHub Issues</a> (public; do not post personal data or credentials).</p>
+  </div></section>
+</main>
+<footer><div class="wrap footer-inner"><p>© 2026 Shogo389 · Orbit Desktop</p><p><a href="privacy.html">プライバシーポリシー / Privacy Policy</a></p></div></footer>
+</body>
+</html>
